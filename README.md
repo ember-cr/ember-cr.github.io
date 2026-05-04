@@ -1,2 +1,3 @@
-# emberlis.github.io
-A Free Chat Room Space for Everyone
+# Welcome to your Lovable project
+
+TODO: Document your project here
