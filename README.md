@@ -11,6 +11,18 @@ Ember is a Free Chat website. You can create chat rooms and invite other people 
  ### That is pretty much it! Have a great time Chatting!
 
  # Recent Changes:
+ ## [1.7.4] - Bug Fixes & UX
+- Fixed a blank screen issue when navigating to the **Explore Public Chats** page.
+- Updated the Public Mode toggle to show a "Saved locally (Supabase migration pending)" message when the database column is missing.
+- Hardened the loading logic for public rooms to be more resilient to network and database errors.
+
+## [1.7.3] - Public Rooms & Explore
+- Added **Public Mode** for rooms: Owners can now toggle their rooms to be discoverable by everyone.
+- Added **Explore Public Chats**: A new page to browse and join public communities.
+- Removed the static Global Chat in favor of a more flexible, community-driven public room system.
+- Added a **Public badge** in chat headers for better visibility.
+- **Migration Required**: Run the SQL in `supabase/migrations/20260506000001_add_public_mode.sql` to enable these features.
+
  ## [1.7.2] - Global Chat
 - Added **Global Chat**: A community room that anyone can optionally join.
 - New **Join Global Chat** prompt on the rooms list page for easy access.
