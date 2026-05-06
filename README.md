@@ -9,6 +9,16 @@ Ember is a Free Chat website. You can create chat rooms and invite other people 
  Back at the main screen (with the list of chat rooms) you can customize your profile by clicking on your profile-> Edit Profile. You can also choose your theme and setting in the Appearance/Sound list (gear-like icon).
 
  ### That is pretty much it! Have a great time Chatting!
+
+ # Recent Changes:
+ ## [1.7.2] - Global Chat
+- Added **Global Chat**: A community room that anyone can optionally join.
+- New **Join Global Chat** prompt on the rooms list page for easy access.
+- Added a "Global" badge in the chat header to identify the community room.
+- Restricted deletion of the Global Chat room to ensure it stays available for everyone.
+- Added support for persistent community rooms via the `is_global` database flag.
+- **Migration Required**: Run the SQL in `supabase/migrations/20260506000000_add_global_flag.sql` in your Supabase SQL Editor to enable Global Chat features.
+- Added **Resilient Mode** for global chat: The app will continue to work even if the database migration hasn't been applied yet
  
  If you have any questions, leave a email! 
  jameshwang0228@outlook.com
