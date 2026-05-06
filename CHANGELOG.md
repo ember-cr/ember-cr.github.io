@@ -2,7 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.7.2] - Global Chat
+## [1.9.0] - Standalone Mode Toggle
+- Added a manual **Standalone Mode** toggle in the Settings Menu.
+- Standalone Mode allows the website to run entirely without Supabase, saving all data (rooms, messages, profiles) to your browser's LocalStorage.
+- Added a **Standalone Mode badge** in the navigation bar when running locally.
+- Real-time chat still works across tabs in the same browser using `BroadcastChannel`.
+- Improved error resilience and added automatic fallbacks for missing database columns.
+
+## [1.8.2] - Bug Fixes & UX
+- Fixed a blank screen issue when navigating to the **Explore Public Chats** page.
+- Updated the Public Mode toggle to show a "Saved locally (Supabase migration pending)" message when the database column is missing.
+- Hardened the loading logic for public rooms to be more resilient to network and database errors.
+
+## [1.8.1] - Public Rooms & Explore
+- Added **Public Mode** for rooms: Owners can now toggle their rooms to be discoverable by everyone.
+- Added **Explore Public Chats**: A new page to browse and join public communities.
+- Removed the static Global Chat in favor of a more flexible, community-driven public room system.
+- Added a **Public badge** in chat headers for better visibility.
+- **Migration Required**: Run the SQL in `supabase/migrations/20260506000001_add_public_mode.sql` to enable these features.
+
+## [1.8.0] - Global Chat
 - Added **Global Chat**: A community room that anyone can optionally join.
 - New **Join Global Chat** prompt on the rooms list page for easy access.
 - Added a "Global" badge in the chat header to identify the community room.
